@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/tali" mode="merge"/>
+    <filter root="/content/tali" mode="merge"/>
+    <filter root="/content/dam/tali" mode="merge">
+        <exclude pattern="/content/dam/tali(/.*)?"/>
+        <include pattern="/content/dam/tali/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/tali/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/tali" mode="merge"/>
+</workspaceFilter>

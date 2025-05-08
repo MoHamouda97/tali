@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/tali",
+        "create path (nt:unstructured) /content/dam/tali/jcr:content",
+        "set properties on /content/dam/tali/jcr:content\n  set cq:conf{String} to /conf/tali\n  set jcr:title{String} to \"tali\"\nend"
+    ]
+}
