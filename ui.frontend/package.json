@@ -11,7 +11,7 @@
   },
   "repository": "github:adobe/aem-angular-editable-components",
   "dependencies": {
-    "@adobe/aem-angular-editable-components": "^1.2.0",
+    "@adobe/aem-angular-editable-components": "^2.0.0",
     "@adobe/aem-core-components-angular-base": "^1.0.16",
     "@adobe/aem-core-components-angular-spa": "^1.0.8",
     "@adobe/aem-spa-component-mapping": "^1.1.1",
