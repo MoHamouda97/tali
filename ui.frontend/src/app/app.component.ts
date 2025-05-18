@@ -19,6 +19,7 @@ import { ModelManager } from '@adobe/aem-spa-page-model-manager';
 import { Constants } from '@adobe/aem-angular-editable-components';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { AemTestComponent } from './pages/aem-test/aem-test.component';
 
 @Component({
   selector: '#spa-root', // tslint:disable-line
@@ -26,7 +27,8 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   standalone: true,
   imports: [
-    RouterOutlet
+    RouterOutlet,
+    AemTestComponent
   ]
 })
 export class AppComponent {
