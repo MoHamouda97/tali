@@ -6,6 +6,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { routes } from "./app.routes";
 import { AemModules } from "./core/aem-modules";
 import { AemResolvers } from "./core/aem.resolvers";
+import { Pages } from "./pages/pages";
 
 export const appConfig: ApplicationConfig = {
     providers: [
@@ -20,6 +21,6 @@ export const appConfig: ApplicationConfig = {
             routes,
             withRouterConfig({ onSameUrlNavigation: 'reload' })
         ) as unknown as Provider,   
-        importProvidersFrom(...AemModules, ...AemResolvers)          
+        importProvidersFrom(...AemModules, ...AemResolvers, ...Pages),         
     ]
 }
