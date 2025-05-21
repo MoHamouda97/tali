@@ -7,7 +7,8 @@
     "build": "ng build --configuration=aem-develop && clientlib",
     "build:production": "ng build --prod && clientlib",
     "test": "ng test",
-    "sync": "aemsync -d -w ../ui.apps/src/main/content"
+    "sync": "aemsync -d -w ../ui.apps/src/main/content",
+    "postinstall": "ngcc --properties es2015 browser module main --first- only --create-ivy-entry-points"
   },
   "repository": "github:adobe/aem-angular-editable-components",
   "dependencies": {
@@ -27,8 +28,7 @@
     "custom-event-polyfill": "^1.0.7",
     "rxjs": "~6.6.7",
     "tslib": "^1.10.0",
-    "whatwg-fetch": "^3.0.0",
-    "zone.js": "~0.15.0"
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~19.2.9",

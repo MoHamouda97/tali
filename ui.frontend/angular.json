@@ -18,7 +18,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "buildOptimizer": false,
             "assets": [
               "src/assets",
@@ -32,7 +32,7 @@
           },
           "configurations": {
             "aem-develop": {
-              "aot": false,
+              "aot": true,
               "buildOptimizer": false,
               "deployUrl": "/etc.clientlibs/tali/clientlibs/clientlib-angular/resources/"
             },
