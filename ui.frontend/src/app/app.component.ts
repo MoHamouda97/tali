@@ -21,7 +21,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: '#spa-root', // tslint:disable-line
+  selector: 'spa-root', // tslint:disable-line
   styleUrls: ['./app.component.css'],
   templateUrl: './app.component.html',
   standalone: true,

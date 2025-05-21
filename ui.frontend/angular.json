@@ -18,7 +18,8 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "aot": false,
+            "buildOptimizer": false,
             "assets": [
               "src/assets",
               "src/favicon.ico",
@@ -31,6 +32,8 @@
           },
           "configurations": {
             "aem-develop": {
+              "aot": false,
+              "buildOptimizer": false,
               "deployUrl": "/etc.clientlibs/tali/clientlibs/clientlib-angular/resources/"
             },
             "serverless": {
