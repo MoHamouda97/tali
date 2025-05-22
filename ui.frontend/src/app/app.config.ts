@@ -7,6 +7,9 @@ import { routes } from "./app.routes";
 import { AemModules } from "./core/aem-modules";
 import { AemResolvers } from "./core/aem.resolvers";
 import { Pages } from "./pages/pages";
+import { AemComponents } from "./core/aem-components";
+import { ModelManagerService } from "./components/model-manager.service";
+import { APP_BASE_HREF } from "@angular/common";
 
 export const appConfig: ApplicationConfig = {
     providers: [
@@ -22,6 +25,16 @@ export const appConfig: ApplicationConfig = {
             routes,
             withRouterConfig({ onSameUrlNavigation: 'reload' })
         ) as unknown as Provider,   
-        importProvidersFrom(...AemModules, ...AemResolvers, ...Pages),         
+        importProvidersFrom(
+            ...AemModules, 
+            ...AemComponents,
+            ...Pages
+        ), 
+        {
+            provide: APP_BASE_HREF,
+            useValue: '/'
+        },
+        ...AemResolvers,
+        ModelManagerService   
     ]
 }

@@ -13,15 +13,15 @@ import { AemAngularCoreWcmComponentsLanguageNavigationV1 } from '@adobe/aem-core
 
 export const AemModules = [
     SpaAngularEditableComponentsModule,
-    AemAngularCoreWcmComponentsTabsV1,
-    AemAngularCoreWcmComponentsTitleV2,
-    AemAngularCoreWcmComponentsBreadCrumbV2,
-    AemAngularCoreWcmComponentsNavigationV1,
-    AemAngularCoreWcmComponentsButtonV1,
-    AemAngularCoreWcmComponentsImageV2,
-    AemAngularCoreWcmComponentsDownloadV1,
-    AemAngularCoreWcmComponentsListV2,
-    AemAngularCoreWcmComponentsAccordionV1,
-    AemAngularCoreWcmComponentsSeparatorV1,
-    AemAngularCoreWcmComponentsLanguageNavigationV1
+    // AemAngularCoreWcmComponentsTabsV1,
+    // AemAngularCoreWcmComponentsTitleV2,
+    // AemAngularCoreWcmComponentsBreadCrumbV2,
+    // AemAngularCoreWcmComponentsNavigationV1,
+    // AemAngularCoreWcmComponentsButtonV1,
+    // AemAngularCoreWcmComponentsImageV2,
+    // AemAngularCoreWcmComponentsDownloadV1,
+    // AemAngularCoreWcmComponentsListV2,
+    // AemAngularCoreWcmComponentsAccordionV1,
+    // AemAngularCoreWcmComponentsSeparatorV1,
+    // AemAngularCoreWcmComponentsLanguageNavigationV1
 ]

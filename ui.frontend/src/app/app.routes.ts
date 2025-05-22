@@ -8,7 +8,7 @@ export function AemPageMatcher(url: UrlSegment[]): UrlMatchResult {
       return {
         consumed: url,
         posParams: {
-          path: url[url.length - 1]
+          path: url?.[url.length - 1]
         }
       };
     }

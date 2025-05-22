@@ -21,7 +21,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-text',
   styleUrls: ['./text.component.css'],
-  templateUrl: './text.component.html'
+  templateUrl: './text.component.html',
+  standalone: true
 })
 export class TextComponent {
   @Input() richText: boolean;
