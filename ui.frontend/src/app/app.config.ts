@@ -1,40 +1,33 @@
 import { provideHttpClient, withFetch } from "@angular/common/http";
 import { ApplicationConfig, importProvidersFrom, provideExperimentalZonelessChangeDetection } from "@angular/core";
-import { provideZoneChangeDetection, isDevMode, Provider } from '@angular/core';
-import { provideRouter, withComponentInputBinding, withRouterConfig } from "@angular/router";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { routes } from "./app.routes";
-import { AemModules } from "./core/aem-modules";
-import { AemResolvers } from "./core/aem.resolvers";
-import { Pages } from "./pages/pages";
-import { AemComponents } from "./core/aem-components";
 import { ModelManagerService } from "./components/model-manager.service";
 import { APP_BASE_HREF } from "@angular/common";
+import { AppRoutingModule } from "./app-routing.module";
+import { AemModules } from "./core/aem-modules";
+import { NavigationV1Component } from '@adobe/aem-core-components-angular-base/layout/navigation/v1';
+import { AEMResponsiveGridComponent } from '@adobe/aem-angular-editable-components';
+//import './components/import-components';
+import './components/aem-components'
 
 export const appConfig: ApplicationConfig = {
     providers: [
         provideExperimentalZonelessChangeDetection(),
-        //provideZoneChangeDetection({ eventCoalescing: true }),
-        provideRouter(routes, withComponentInputBinding()),
         provideHttpClient(
             //withInterceptors([AuthInterceptor, SuccessInterceptor, ErrorInterceptor]),
             withFetch()
         ), 
-        provideAnimationsAsync(),  
-        provideRouter(
-            routes,
-            withRouterConfig({ onSameUrlNavigation: 'reload' })
-        ) as unknown as Provider,   
+        provideAnimationsAsync(),   
         importProvidersFrom(
-            ...AemModules, 
-            ...AemComponents,
-            ...Pages
+            AEMResponsiveGridComponent,
+            NavigationV1Component,
+            ...AemModules,          
+            AppRoutingModule, 
         ), 
         {
             provide: APP_BASE_HREF,
             useValue: '/'
         },
-        ...AemResolvers,
         ModelManagerService   
     ]
 }

@@ -10,6 +10,7 @@ import { AemAngularCoreWcmComponentsListV2 } from '@adobe/aem-core-components-an
 import { AemAngularCoreWcmComponentsSeparatorV1 } from '@adobe/aem-core-components-angular-base/authoring/separator/v1';
 import { AemAngularCoreWcmComponentsAccordionV1 } from '@adobe/aem-core-components-angular-spa/containers/accordion/v1';
 import { AemAngularCoreWcmComponentsLanguageNavigationV1 } from '@adobe/aem-core-components-angular-base/layout/language-navigation/v1';
+import { NgModule } from '@angular/core';
 
 export const AemModules = [
     SpaAngularEditableComponentsModule,

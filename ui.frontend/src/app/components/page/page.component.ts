@@ -14,16 +14,19 @@
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-import { Constants } from '@adobe/aem-angular-editable-components';
-import { Component } from '@angular/core';
+import { AEMContainerComponent, Constants } from '@adobe/aem-angular-editable-components';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ModelManagerService } from '../model-manager.service';
-
+import { AemModules } from 'src/app/core/aem-modules';
 @Component({
   selector: 'app-main',
   styleUrls: ['./page.component.css'],
   templateUrl: './page.component.html',
-  standalone: true
+  standalone: true,
+  imports: [
+    ...AemModules,
+  ]
 })
 export class PageComponent {
   items;
@@ -40,6 +43,7 @@ export class PageComponent {
         this.path = data[Constants.PATH_PROP];
         this.items = data[Constants.ITEMS_PROP];
         this.itemsOrder = data[Constants.ITEMS_ORDER_PROP];
+        console.log('Constants Constants Constants', Constants)
       });
   }
 }
